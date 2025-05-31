@@ -1,0 +1,212 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ff6b9d;
+}
+
+h1 {
+    text-align: center;
+    color: #ff6b9d;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4ecdc4;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.zephyr-status {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 2px solid #4ecdc4;
+}
+
+.need-meter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.need-meter label {
+    min-width: 80px;
+    color: #333;
+}
+
+.meter-bar {
+    flex: 1;
+    height: 25px;
+    background: #e9ecef;
+    border-radius: 12px;
+    margin: 0 15px;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+
+.meter-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.meter-fill.good {
+    background: linear-gradient(90deg, #28a745, #20c997);
+}
+
+.meter-fill.warning {
+    background: linear-gradient(90deg, #ffc107, #fd7e14);
+}
+
+.meter-fill.danger {
+    background: linear-gradient(90deg, #dc3545, #e74c3c);
+}
+
+.need-meter span {
+    min-width: 60px;
+    text-align: right;
+    color: #333;
+}
+
+.game-message {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.game-message p {
+    margin: 0;
+    font-size: 1.3em;
+    color: #856404;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 600px) {
+    .action-buttons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.action-btn {
+    background: linear-gradient(145deg, #ff6b9d, #c44569);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: inherit;
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #c44569, #ff6b9d);
+}
+
+.action-btn:active {
+    transform: translateY(-1px);
+}
+
+.action-btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.turn-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e7f3ff;
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid #4ecdc4;
+}
+
+.turn-info p {
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+}
+
+.next-turn-btn {
+    background: linear-gradient(145deg, #4ecdc4, #26d0ce);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: inherit;
+}
+
+.next-turn-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #26d0ce, #4ecdc4);
+}
+
+.next-turn-btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .turn-info {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+}

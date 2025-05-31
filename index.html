@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zephyr's Needs Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Take Care of Zephyr! 🌟</h1>
+        
+        <div class="zephyr-status">
+            <h2>Zephyr's Needs</h2>
+            <div class="need-meter">
+                <label>Hunger: </label>
+                <div class="meter-bar">
+                    <div class="meter-fill" id="hunger-fill"></div>
+                </div>
+                <span id="hunger-text">50/100</span>
+            </div>
+            
+            <div class="need-meter">
+                <label>Thirst: </label>
+                <div class="meter-bar">
+                    <div class="meter-fill" id="thirst-fill"></div>
+                </div>
+                <span id="thirst-text">50/100</span>
+            </div>
+            
+            <div class="need-meter">
+                <label>Health: </label>
+                <div class="meter-bar">
+                    <div class="meter-fill" id="health-fill"></div>
+                </div>
+                <span id="health-text">100/100</span>
+            </div>
+            
+            <div class="need-meter" id="hygiene-meter" style="display: none;">
+                <label>Hygiene: </label>
+                <div class="meter-bar">
+                    <div class="meter-fill" id="hygiene-fill"></div>
+                </div>
+                <span id="hygiene-text">100/100</span>
+            </div>
+            
+            <div class="need-meter" id="fun-meter" style="display: none;">
+                <label>Fun: </label>
+                <div class="meter-bar">
+                    <div class="meter-fill" id="fun-fill"></div>
+                </div>
+                <span id="fun-text">100/100</span>
+            </div>
+            
+            <div class="need-meter" id="education-meter" style="display: none;">
+                <label>Education: </label>
+                <div class="meter-bar">
+                    <div class="meter-fill" id="education-fill"></div>
+                </div>
+                <span id="education-text">100/100</span>
+            </div>
+        </div>
+
+        <div class="game-message">
+            <p id="message">Zephyr is waiting for you to help! What should we do?</p>
+        </div>
+
+        <div class="action-buttons">
+            <button class="action-btn" id="feed-btn" onclick="feedZephyr()">
+                🍎 Feed Zephyr
+            </button>
+            <button class="action-btn" id="water-btn" onclick="giveWater()">
+                💧 Give Water
+            </button>
+            <button class="action-btn" id="medicine-btn" onclick="giveMedicine()">
+                💊 Give Medicine
+            </button>
+            <button class="action-btn" id="rest-btn" onclick="letRest()">
+                😴 Let Rest
+            </button>
+            <button class="action-btn" id="bath-btn" onclick="giveBath()" style="display: none;">
+                🛁 Give Bath
+            </button>
+            <button class="action-btn" id="play-btn" onclick="playWithZephyr()" style="display: none;">
+                🎮 Play Together
+            </button>
+            <button class="action-btn" id="learn-btn" onclick="teachZephyr()" style="display: none;">
+                📚 Teach Something
+            </button>
+        </div>
+
+        <div class="turn-info">
+            <p>Turn: <span id="turn-counter">1</span></p>
+            <button class="next-turn-btn" id="next-turn-btn" onclick="nextTurn()">
+                Next Turn ⏭️
+            </button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script src="zephyr-config.js"></script>
+</body>
+</html>
